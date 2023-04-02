@@ -1,8 +1,9 @@
-# Poetry Crashkurs
+## Poetry Crashkurs
 
 ### Projekt initialisieren
 
-Der Crashkurs ist auf PyCharm und Windows ausgerichtet, wird zunächst Fokus darauf gelegt, PyCharm so zu konfigurieren, dass man den korrekten Python Interpreter verwendet.
+Der Crashkurs ist auf PyCharm und Windows ausgerichtet. Zunächst konfigurieren wir PyCharm, um den korrekten Python-Interpreter zu verwenden:
+
 1. Settings -> Python Interpreter -> Add -> Pfad zu Interpreter setzen (Python 3.11), bei mir: `C:\Users\User\AppData\Local\Programs\Python\Python311`
 2. Execution Policy auf "RemoteSigned" setzen: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
@@ -12,9 +13,9 @@ Poetry sollte in die globale Environment installiert werden.
 
 Poetry zu PATH hinzufügen:
 
-- $HOME/.local/bin on Unix.
-- %APPDATA%\Python\Scripts on Windows.
-- $POETRY_HOME/bin if $POETRY_HOME is set.
+- `$HOME/.local/bin` on Unix.
+- `%APPDATA%\Python\Scripts` on Windows.
+- `$POETRY_HOME/bin` if `$POETRY_HOME` is set.
 
 Version von Poetry überprüfen: `poetry --version`
 
@@ -42,7 +43,6 @@ Neues Projekt erstellen: `poetry new project`
 
 Initialisierung in Projekt: `poetry init`
 
-
 ### Dependencies verwalten
 
 Dependency hinzufügen: `poetry add pandas`
@@ -51,11 +51,8 @@ Dev-Dependency hinzufügen: `poetry add pytest --dev`
 
 Packages updaten: `poetry add package@latest`
 
-
 ### Version constraints
 
-Detaillierter Überblick hier: https://python-poetry.org/docs/dependency-specification/
+Detaillierter Überblick hier: [https://python-poetry.org/docs/dependency-specification/](https://python-poetry.org/docs/dependency-specification/)
 
 Dependencies exportieren: `poetry export -f requirements.txt --output requirements.txt`
-
-
