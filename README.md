@@ -56,3 +56,12 @@ Packages updaten: `poetry add package@latest`
 Detaillierter Überblick hier: [https://python-poetry.org/docs/dependency-specification/](https://python-poetry.org/docs/dependency-specification/)
 
 Dependencies exportieren: `poetry export -f requirements.txt --output requirements.txt`
+
+### Script ausführen
+
+```toml
+[tool.poetry.scripts]
+cmd = "myproject.main:main"
+```
+
+Ausführen kann man das Ganze mit `poetry run cmd`
